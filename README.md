@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+if you don't have [json-server](https://www.npmjs.com/package/json-server) installed globally, you should install it to use db.json file as a database for your project:
+### `npm i -g json-server`
+then run:
+### `json-server --watch db.json --port 3030`
+to listen to db.json file
+
+
 ## Available Scripts
 
 In the project directory, you can run:

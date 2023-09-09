@@ -37,7 +37,7 @@ const QuizzesList = () => {
                     loading && quizzes.length > 0 ?
                         quizzes.map(quiz => (
                             <div key={quiz.id} onClick={(e) => handleQuizClick(e, quiz.id)}>
-                                <QuizCard id={quiz.id} title={quiz.title} />
+                                <QuizCard id={quiz.id} title={quiz.title} score={quiz.score} url={quiz.url} />
                             </div>
                         ))
                     :
