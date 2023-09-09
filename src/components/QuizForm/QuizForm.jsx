@@ -80,13 +80,17 @@ const QuizForm = ({ type }) => {
             title,
             description,
             url,
-            score: quiz.score,
-            created: quiz.created,
             modified,
             questions_answers: questions
         }
 
-        axios.put(`${process.env.REACT_APP_API_URL}/quizzes/${id}`, data).then(res => {
+        axios.patch(`${process.env.REACT_APP_API_URL}/quizzes/${id}`, data, {
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods':'GET, POST, DELETE, PUT, PATCH',
+                'Content-Type': 'application/json',
+            }
+        }).then(res => {
             setSubmitLoading(false)
             setSubmitText('Save')
             history.push('/')

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "quiz title 1",
-      "score": null,
+      "score": 0,
       "description": "Description",
       "url": "https://www.youtube.com/watch?v=e6EGQFJLl04",
       "created": "2020-09-09 09:26:39",
@@ -14,7 +14,7 @@
           "text": "question 1 text",
           "feedback_false": "question 1 false feedback",
           "feedback_true": "question 1 true feedback",
-          "answer_id": null,
+          "answer_id": 124,
           "answers": [
             {
               "id": 122,
@@ -43,7 +43,7 @@
           "text": "question 2 text",
           "feedback_false": "question 2 false feedback",
           "feedback_true": "question 2 true feedback",
-          "answer_id": null,
+          "answer_id": 127,
           "answers": [
             {
               "id": 126,
@@ -54,30 +54,6 @@
               "id": 127,
               "is_true": false,
               "text": "question 2 answer 2 false"
-            }
-          ]
-        },
-        {
-          "id": 55,
-          "text": "question 3 text",
-          "feedback_false": "question 3 false feedback",
-          "feedback_true": "question 3 true feedback",
-          "answer_id": null,
-          "answers": [
-            {
-              "id": 128,
-              "is_true": false,
-              "text": "question 3 answer 1 false"
-            },
-            {
-              "id": 129,
-              "is_true": true,
-              "text": "question 3 answer 2 true"
-            },
-            {
-              "id": 130,
-              "is_true": false,
-              "text": "question 3 answer 3 false"
             }
           ]
         }
@@ -85,12 +61,12 @@
     },
     {
       "id": 2,
-      "title": "quiz title 2",
+      "title": "quiz title 21",
       "score": null,
       "description": "Description",
       "url": "https://www.youtube.com/watch?v=e6EGQFJLl04",
       "created": "2020-09-09 09:26:39",
-      "modified": "2020-09-09 09:26:39",
+      "modified": "2023-09-09 08:23:26",
       "questions_answers": [
         {
           "id": 53,
@@ -159,8 +135,8 @@
             },
             {
               "id": 130,
-              "is_true": false,
-              "text": "question 3 answer 3 false"
+              "text": "question 3 answer 3 false",
+              "is_true": false
             }
           ]
         }
@@ -169,36 +145,17 @@
     {
       "title": "New Quiz",
       "description": "Testing add",
-      "score": null,
+      "score": 5,
       "url": "https://chat.openai.com/",
       "created": "2020-09-09 09:26:39",
       "modified": "2023-09-08 22:54:03",
       "questions_answers": [
         {
-          "id": 1,
-          "text": "Are you okay?",
-          "feedback_false": "Bad",
-          "feedback_true": "Nice",
-          "answer_id": null,
-          "answers": [
-            {
-              "id": 1,
-              "text": "Yes.",
-              "is_true": false
-            },
-            {
-              "id": 2,
-              "text": "No.",
-              "is_true": true
-            }
-          ]
-        },
-        {
           "id": 2,
           "text": "How old are you?",
           "feedback_false": "so small",
           "feedback_true": "Nice age",
-          "answer_id": null,
+          "answer_id": 4,
           "answers": [
             {
               "id": 1,
@@ -431,6 +388,70 @@
         }
       ],
       "id": 7
+    },
+    {
+      "title": "Last Quiz",
+      "description": "This is the last one",
+      "url": "https://www.youtube.com/",
+      "score": 5,
+      "created": "2023-09-09 08:37:17",
+      "modified": "2023-09-09 08:37:39",
+      "questions_answers": [
+        {
+          "id": 1,
+          "text": "How are you?",
+          "feedback_false": "Sorry",
+          "feedback_true": "Nice",
+          "answer_id": 2,
+          "answers": [
+            {
+              "id": 1,
+              "text": "Fine",
+              "is_true": true
+            },
+            {
+              "id": 2,
+              "text": "Not Good",
+              "is_true": false
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "text": "How old are you?",
+          "feedback_false": "So small",
+          "feedback_true": "That's good",
+          "answer_id": 4,
+          "answers": [
+            {
+              "id": 1,
+              "text": "23",
+              "is_true": false
+            },
+            {
+              "id": 2,
+              "text": "24",
+              "is_true": false
+            },
+            {
+              "id": 3,
+              "text": "25",
+              "is_true": false
+            },
+            {
+              "id": 4,
+              "text": "26",
+              "is_true": true
+            },
+            {
+              "id": 5,
+              "text": "27",
+              "is_true": false
+            }
+          ]
+        }
+      ],
+      "id": 8
     }
   ]
 }
