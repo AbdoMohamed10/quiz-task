@@ -22,10 +22,17 @@ const QuizDetails = () => {
     }
 
     const handleAnswerQuestion = (question, answer) => {
-        setQuestionAnswers(prevState => [...prevState, {question, selectedAnswer: answer}])
+        let questionAnswersFiltered = questionAnswers.filter(qa => qa.question.id !== question.id)
+
+        if(questionAnswers.some(qa => qa.question.id === question.id && qa.selectedAnswer.is_true)) {
+            setScore(prevState => prevState-5)
+        }
+
         if(answer.is_true) {
             setScore(prevState => prevState+5)
         }
+
+        setQuestionAnswers([...questionAnswersFiltered, {question, selectedAnswer: answer}])
 
     }
 
@@ -64,7 +71,7 @@ const QuizDetails = () => {
         axios.patch(`${process.env.REACT_APP_API_URL}/quizzes/${quiz.id}`, data, {
             headers: {
                 'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods':'GET, POST, DELETE, PUT, PATCH',
+                'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT, PATCH',
                 'Content-Type': 'application/json',
             }
         }).then(res => {
@@ -98,8 +105,8 @@ const QuizDetails = () => {
                                         {
                                             question.answers.length > 0 && question.answers.map(answer => (
                                                 <div key={answer.id} className="col-md-6 d-flex justify-content-between align-items-center">
-                                                    <label htmlFor={`answer-${answer.id}`}>{answer.text}</label>
-                                                    <input type="radio" id={`answer-${answer.id}`} name={`answer-${question.id}`} onChange={() => handleAnswerQuestion(question, answer)} />
+                                                    <label htmlFor={`answer-${question.id}-${answer.id}`}>{answer.text}</label>
+                                                    <input type="radio" id={`answer-${question.id}-${answer.id}`} name={`answer-${question.id}`} onChange={() => handleAnswerQuestion(question, answer)} />
                                                 </div>
                                             ))
                                         }
