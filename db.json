@@ -393,29 +393,10 @@
       "title": "Last Quiz",
       "description": "This is the last one",
       "url": "https://www.youtube.com/",
-      "score": 5,
+      "score": 10,
       "created": "2023-09-09 08:37:17",
       "modified": "2023-09-09 08:37:39",
       "questions_answers": [
-        {
-          "id": 1,
-          "text": "How are you?",
-          "feedback_false": "Sorry",
-          "feedback_true": "Nice",
-          "answer_id": 2,
-          "answers": [
-            {
-              "id": 1,
-              "text": "Fine",
-              "is_true": true
-            },
-            {
-              "id": 2,
-              "text": "Not Good",
-              "is_true": false
-            }
-          ]
-        },
         {
           "id": 2,
           "text": "How old are you?",
@@ -446,6 +427,25 @@
             {
               "id": 5,
               "text": "27",
+              "is_true": false
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "text": "How are you?",
+          "feedback_false": "Sorry",
+          "feedback_true": "Nice",
+          "answer_id": 1,
+          "answers": [
+            {
+              "id": 1,
+              "text": "Fine",
+              "is_true": true
+            },
+            {
+              "id": 2,
+              "text": "Not Good",
               "is_true": false
             }
           ]
